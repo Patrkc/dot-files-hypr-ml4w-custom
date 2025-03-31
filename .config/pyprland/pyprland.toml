@@ -1,0 +1,51 @@
+[pyprland]
+
+plugins = [
+"layout_center",
+"toggle_special",
+"scratchpads"
+]
+
+[layout_center]
+margin = [300, 60]
+offset = [0, 30]
+next = "movefocus r"
+prev = "movefocus l"
+next2 = "movefocus d"
+prev2 = "movefocus u"
+
+
+[scratchpads.kterm]
+animation = "fromTop"
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
+size = "75% 90%"
+max_size = "1920px 100%"
+margin = 50
+
+[scratchpads.term]
+animation = "fromBottom"
+command = "ghostty"
+class = "ghostty-scratchpad"
+size = "75% 90%"
+max_size = "1920px 100%"
+margin = 50
+
+[scratchpads.readebook]
+animation = "fromBottom"
+command = "fbreader"
+class = "fbreader-scratchpad"
+size = "30% 90%"
+max_size = "1920px 100%"
+margin = 50
+lazy = true  
+
+
+[scratchpads.chrome]
+animation = "fromBottom"
+command = "google-chrome-stable"
+class = "google-chrome-stable-scratchpad"
+size = "90% 90%"
+max_size = "1920px 100%"
+margin = 50
+lazy = true
