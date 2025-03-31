@@ -1,0 +1,315 @@
+{
+	"editor.semanticHighlighting.enabled": true,
+	// prevent VSCode from modifying the terminal colors
+	// "terminal.integrated.minimumContrastRatio": 1,
+	"debug.javascript.autoAttachFilter": "disabled",
+	"markdown.preview.fontSize": 16,
+
+	"telemetry.telemetryLevel": "off",
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+	"workbench.activityBar.location": "top",
+	"workbench.editor.centeredLayoutFixedWidth": true,
+	"workbench.editor.centeredLayoutAutoResize": false,
+
+	"projectManager.git.baseFolders": [
+		"vscode-remote://ssh-remote+s00.agssa.net/home/pcairoli/project-one/",
+		"home/archimboldi/projects/"
+	],
+	"projectManager.sortList": "Recent",
+
+	"explorer.confirmDelete": false,
+	"explorer.compactFolders": false,
+
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"prettier.useTabs": true,
+
+	"editor.fontFamily": "'CaskaydiaCove Nerd Font', 'FiraCode Nerd Font', 'Courier New', monospace",
+	"editor.rulers": [100, 100],
+	"editor.mouseWheelZoom": true,
+	"editor.minimap.autohide": true,
+	"editor.formatOnSave": true,
+	"editor.fontLigatures": true,
+	"editor.tabSize": 2,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.smoothScrolling": true,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": "active",
+	"editor.wordWrap": "on",
+	"editor.suggest.insertMode": "replace",
+	"editor.codeActionsOnSave": {
+		"source.addMissingImports.ts": "explicit",
+		"source.addMissingImports": "explicit",
+		"source.removeUnusedImports": "explicit"
+		// "source.organizeImports": "explicit"
+	},
+
+	"prettier.singleQuote": true,
+
+	"typescript.inlayHints.parameterNames.enabled": "literals",
+
+	"editor.minimap.enabled": false,
+	"supermaven.enable": {
+		"*": false
+	},
+	"remote.SSH.defaultForwardedPorts": [],
+	"diffEditor.ignoreTrimWhitespace": false,
+	"terminal.explorerKind": "external",
+	"terminal.integrated.confirmOnExit": "hasChildProcesses",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"workbench.editor.scrollToSwitchTabs": true,
+	"workbench.editor.highlightModifiedTabs": true,
+	"workbench.editor.showTabs": "single",
+
+	"breadcrumbs.enabled": false,
+	"workbench.colorTheme": "Catppuccin Mocha",
+	"workbench.iconTheme": "a-file-icon-vscode",
+
+	"screencastMode.fontSize": 25,
+	"screencastMode.verticalOffset": 10,
+
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					//following will be in italic (=FlottFlott)
+					"comment",
+					"entity.name.type.class", //class names
+					"keyword", //import, export, return
+					"constant", //String, Number, Boolean, this, super
+					"storage.modifier", //static keyword
+					"storage.type.class.js" //class keyword
+				],
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": [
+					//following will be excluded from italics (VSCode has some defaults for italics)
+					"invalid",
+					"keyword.operator",
+					"constant.numeric.css",
+					"keyword.other.unit.px.css",
+					"constant.numeric.decimal.js",
+					"constant.numeric.json"
+				],
+				"settings": {
+					"fontStyle": ""
+				}
+			}
+		]
+	},
+
+	// VIM Config
+	"vim.leader": "<Space>",
+	"editor.cursorSurroundingLines": 8,
+	"vim.useCtrlKeys": false,
+
+	// "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+	"vim.foldfix": true,
+	"vim.highlightedyank.enable": true,
+	"vim.highlightedyank.color": "#CAA6F4",
+	"vim.highlightedyank.duration": 250,
+	"vim.useSystemClipboard": true,
+	"vim.easymotion": true,
+
+	// VIM will ignore these Keybindings
+	"vim.handleKeys": {
+		"<C-d>": false,
+		"<C-f>": false,
+		"<C-c>": false,
+		"<C-v>": false,
+		"<C-x>": false,
+		"<S-n>": false,
+		"<C-a>": false
+	},
+
+	"vim.normalModeKeyBindingsNonRecursive": [
+		// Toggle Booleans
+		{
+			"before": ["<leader>", "i"],
+			"commands": ["extension.toggleBool"]
+		},
+		// NAVIGATION
+
+		// File Explorer
+		{
+			"before": ["<leader>", "e"],
+			"commands": ["workbench.view.explorer"]
+		},
+		// switch b/w buffers
+		{ "before": ["<S-h>"], "commands": [":bprevious"] },
+		{ "before": ["<S-l>"], "commands": [":bnext"] },
+
+		// splits
+		{ "before": ["leader", "v"], "commands": [":vsplit"] },
+		{ "before": ["leader", "s"], "commands": [":split"] },
+
+		// panes
+		{
+			"before": ["leader", "h"],
+			"commands": ["workbench.action.focusLeftGroup"]
+		},
+		{
+			"before": ["leader", "j"],
+			"commands": ["workbench.action.focusBelowGroup"]
+		},
+		{
+			"before": ["leader", "k"],
+			"commands": ["workbench.action.focusAboveGroup"]
+		},
+		{
+			"before": ["leader", "l"],
+			"commands": ["workbench.action.focusRightGroup"]
+		},
+		// NICE TO HAVE
+		{ "before": ["leader", "w"], "commands": [":w!"] },
+		{ "before": ["leader", "q"], "commands": [":q!"] },
+		{ "before": ["leader", "x"], "commands": [":x!"] },
+		// {
+		// 	"before": ["[", "d"],
+		// 	"commands": ["editor.action.marker.prev"]
+		// },
+		// {
+		// 	"before": ["]", "d"],
+		// 	"commands": ["editor.action.marker.next"]
+		// },
+		{
+			"before": ["<leader>", "c", "a"],
+			"commands": ["editor.action.quickFix"]
+		},
+		{ "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+		{ "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+		{
+			"before": ["g", "h"],
+			"commands": ["editor.action.showDefinitionPreviewHover"]
+		}
+	],
+	"vim.visualModeKeyBindings": [
+		// Stay in visual mode while indenting
+		{ "before": ["<"], "commands": ["editor.action.outdentLines"] },
+		{ "before": [">"], "commands": ["editor.action.indentLines"] },
+		// Move selected lines while staying in visual mode
+		{ "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+		{ "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+		// toggle comment selection
+		// { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+	],
+
+	"vim.normalModeKeyBindings": [
+		/**
+		LSP Keybindings
+
+		gd - Go to Definition (🔥)
+		gpd - Peek Definition
+		gh - Show Hover (🔥)
+		gi - Go to Implementations (🔥)
+		gpi - Peek Implementations	
+		gq - Quick fix (open the code action lightbulb menu)
+		gr - Go to References (🔥)
+		gt - Go to Type Definition (🔥)
+		gpt - Peek Type Definition
+		*/
+
+		{
+			"before": ["g", "p", "d"],
+			"commands": ["editor.action.peekDefinition"]
+		},
+		{
+			"before": ["g", "h"],
+			"commands": ["editor.action.showDefinitionPreviewHover"]
+		},
+		{
+			"before": ["g", "i"],
+			"commands": ["editor.action.goToImplementation"]
+		},
+		{
+			"before": ["g", "p", "i"],
+			"commands": ["editor.action.peekImplementation"]
+		},
+		{
+			"before": ["g", "q"],
+			"commands": ["editor.action.quickFix"]
+		},
+		{
+			"before": ["g", "r"],
+			"commands": ["editor.action.referenceSearch.trigger"]
+		},
+		{
+			"before": ["g", "t"],
+			"commands": ["editor.action.goToTypeDefinition"]
+		},
+		{
+			"before": ["g", "p", "t"],
+			"commands": ["editor.action.peekTypeDefinition"]
+		}
+	],
+	// "editor.scrollBeyondLastLine": false,
+
+	"gopls": {
+		"ui.semanticTokens": true
+	},
+	"cSpell.userWords": [
+		"bnext",
+		"bprevious",
+		"bspc",
+		"Catppuccin",
+		"defalias",
+		"defcfg",
+		"deflayer",
+		"defsrc",
+		"defvar",
+		"easymotion",
+		"escctrl",
+		"foldfix",
+		"gopls",
+		"highlightedyank",
+		"lalt",
+		"lctl",
+		"lmet",
+		"lsft",
+		"outdent",
+		"ralt",
+		"rctl",
+		"rmet",
+		"rsft",
+		"screencast",
+		"supermaven",
+		"vsplit"
+	],
+	"terminal.integrated.suggest.enabled": true,
+	"workbench.sideBar.location": "right",
+	"window.menuBarVisibility": "toggle",
+	"window.commandCenter": false,
+	"github.copilot.editor.enableAutoCompletions": false,
+	"emmet.showAbbreviationSuggestions": false,
+	"vim.smartRelativeLine": true
+
+	// "[go]": {
+	// 	"editor.defaultFormatter": "golang.go",
+	// 	"editor.formatOnSave": true
+	// },
+
+	// "macros.list": {
+	//   "splitAndCloseRight": [
+	//     "workbench.action.splitEditorToRightGroup",
+	//     "workbench.action.focusPreviousGroup",
+	//     "workbench.action.closeActiveEditor"
+	//   ],
+	//   "splitAndCloseLeft": [
+	//     "workbench.action.splitEditorToLeftGroup",
+	//     "workbench.action.focusPreviousGroup",
+	//     "workbench.action.closeActiveEditor"
+	//   ],
+	//   "splitAndCloseDown": [
+	//     "workbench.action.splitEditorToBelowGroup",
+	//     "workbench.action.focusPreviousGroup",
+	//     "workbench.action.closeActiveEditor"
+	//   ],
+	//   "splitAndCloseUp": [
+	//     "workbench.action.splitEditorToAboveGroup",
+	//     "workbench.action.focusPreviousGroup",
+	//     "workbench.action.closeActiveEditor"
+	//   ]
+	// },
+}
