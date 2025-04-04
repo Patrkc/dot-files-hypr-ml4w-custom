@@ -14,7 +14,6 @@ prev = "movefocus l"
 next2 = "movefocus d"
 prev2 = "movefocus u"
 
-
 [scratchpads.kterm]
 animation = "fromTop"
 command = "kitty --class kitty-dropterm"
