@@ -30,6 +30,7 @@ function y() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
-}  
+}    
 
+#  https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#flags
 eval "$(zoxide init zsh)"
