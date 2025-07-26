@@ -1,41 +1,41 @@
 // Place your key bindings in this file to override the defaults
 [
 	{
-		"key": "ctrl+shift+'",
-		"command": "workbench.action.toggleActivityBarVisibility"
+		"command": "workbench.action.toggleActivityBarVisibility",
+		"key": "ctrl+shift+'"
 	},
 	{
-		"key": "ctrl+shift+/",
-		"command": "workbench.action.toggleStatusbarVisibility"
+		"command": "workbench.action.toggleStatusbarVisibility",
+		"key": "ctrl+shift+/"
 	},
 	// NAVIGATION
 	{
-		"key": "ctrl+shift+a",
 		"command": "workbench.action.terminal.focusNext",
-		"when": "terminalFocus"
-	},
-	{
-		"key": "ctrl+shift+b",
-		"command": "workbench.action.terminal.focusPrevious",
-		"when": "terminalFocus"
-	},
-	{
 		"key": "ctrl+shift+j",
-		"command": "workbench.action.terminal.toggleTerminal"
+		"when": "terminalFocus"
 	},
 	{
-		"key": "ctrl+shift+n",
+		"command": "workbench.action.terminal.focusPrevious",
+		"key": "ctrl+shift+k",
+		"when": "terminalFocus"
+	},
+	{
+		"command": "workbench.action.terminal.toggleTerminal",
+		"key": "ctrl+shift+t t"
+	},
+	{
 		"command": "workbench.action.terminal.new",
+		"key": "ctrl+shift+n",
 		"when": "terminalFocus"
 	},
 	{
-		"key": "ctrl+shift+w",
 		"command": "workbench.action.terminal.kill",
+		"key": "ctrl+shift+q",
 		"when": "terminalFocus"
 	},
 	{
-		"key": "ctrl+k",
 		"command": "workbench.action.terminal.clear",
+		"key": "ctrl+shift+t c",
 		"when": "terminalFocus"
 	},
 	/**
@@ -55,18 +55,13 @@
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "n",
-		"command": "explorer.newFile",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
 		"command": "renameFile",
 		"key": "r",
 		"when": "filesExplorerFocus && !inputFocus"
 	},
 	{
-		"key": "shift+n",
 		"command": "explorer.newFolder",
+		"key": "shift+n",
 		"when": "explorerViewletFocus"
 	},
 	{
@@ -75,82 +70,262 @@
 		"when": "filesExplorerFocus && !inputFocus"
 	},
 	{
-		"key": "shift+x",
 		"command": "filesExplorer.cut",
+		"key": "shift+x",
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
 	},
 	{
-		"key": "shift+c",
 		"command": "filesExplorer.copy",
+		"key": "shift+c",
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
 	},
 	{
-		"key": "shift+p",
 		"command": "filesExplorer.paste",
+		"key": "shift+p",
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
 	},
-
 	// EXTRA
-	{
-		"key": "ctrl+shift+5",
-		"command": "editor.emmet.action.matchTag"
-	},
-	// {
-	// 	"key": "ctrl+z",
-	// 	"command": "workbench.action.toggleZenMode"
-	// },
 	// scroll in a hover window
 	{
-		"key": "h",
 		"command": "editor.action.scrollLeftHover",
+		"key": "h",
 		"when": "editorHoverFocused"
 	},
 	{
-		"key": "j",
 		"command": "editor.action.scrollDownHover",
+		"key": "j",
 		"when": "editorHoverFocused"
 	},
 	{
-		"key": "k",
 		"command": "editor.action.scrollUpHover",
+		"key": "k",
 		"when": "editorHoverFocused"
 	},
 	{
-		"key": "l",
 		"command": "editor.action.scrollRightHover",
+		"key": "l",
 		"when": "editorHoverFocused"
 	},
+	// EXTENSIONS
 	{
-		"key": "ctrl+shift+l l",
-		"command": "turboConsoleLog.displayLogMessage"
+		"command": "turboConsoleLog.displayLogMessage",
+		"key": "ctrl+shift+l l"
 	},
 	{
-		"key": "ctrl+shift+g l",
-		"command": "git-graph.view"
+		"command": "git-graph.view",
+		"key": "ctrl+shift+g l"
 	},
 	{
-		"key": "ctrl+f4",
-		"command": "extension.vim_ctrl+b",
-		"when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+		"command": "windsurf.prioritized.chat.open",
+		"key": "ctrl+alt+b"
 	},
 	{
-		"key": "ctrl+b",
-		"command": "-extension.vim_ctrl+b",
-		"when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+		"command": "-windsurf.prioritized.chat.open",
+		"key": "ctrl+l",
+		"when": "!terminalFocus"
+	},
+	// Harpoon
+	// {
+	// 	"commands": ["vscode-harpoon.addEditor"],
+	// 	"key": "alt+a"
+	// },
+	// {
+	// 	"commands": ["vscode-harpoon.editEditors"],
+	// 	"key": "alt+e"
+	// },
+	// {
+	// 	"commands": ["vscode-harpoon.editorQuickPick"],
+	// 	"key": "alt+p"
+	// },
+	// {
+	// 	"command": "vscode-harpoon.gotoEditor1",
+	// 	"key": "alt+1"
+	// },
+	// {
+	// 	"command": "vscode-harpoon.gotoEditor1",
+	// 	"key": "alt+2"
+	// },
+	// {
+	// 	"command": "vscode-harpoon.gotoEditor1",
+	// 	"key": "alt+3"
+	// },
+	/*********** VIM **********/
+	// Navigation
+	{
+		"command": "workbench.action.navigateLeft",
+		"key": "ctrl-h"
 	},
 	{
-		"key": "ctrl+d",
-		"command": "-extension.vim_ctrl+d",
-		"when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+		"command": "workbench.action.navigateRight",
+		"key": "ctrl-l"
 	},
 	{
-		"key": "meta+d",
-		"command": "-extension.vim_cmd+d",
-		"when": "editorTextFocus && vim.active && vim.use<D-d> && !inDebugRepl"
+		"command": "workbench.action.navigateUp",
+		"key": "ctrl-k"
 	},
 	{
-		"key": "ctrl+d",
-		"command": "-list.focusPageDown",
-		"when": "listFocus && !inputFocus"
+		"command": "workbench.action.navigateDown",
+		"key": "ctrl-j"
+	},
+	{
+		"command": "editor.action.moveLinesDownAction",
+		"key": "alt-j",
+		"when": "(vim.mode === 'Normal' || vim.mode === 'Visual' || vim.mode === 'Insert') && editorTextFocus"
+	},
+	{
+		"command": "editor.action.moveLinesUpAction",
+		"key": "alt-k",
+		"when": "(vim.mode === 'Normal' || vim.mode === 'Visual' || vim.mode === 'Insert') && editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+0",
+		"command": "workbench.action.toggleCenteredLayout"
+	},
+	{
+		"key": "ctrl+shift+b",
+		"command": "workbench.action.toggleAuxiliaryBar"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-chatEditor.action.undoHunk",
+		"when": "chatEdits.hasEditorModifications && editorFocus && !chatEdits.isRequestInProgress || chatEdits.hasEditorModifications && notebookCellListFocused && !chatEdits.isRequestInProgress"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-workbench.action.files.newUntitledFile"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "-extension.vim_ctrl+j",
+		"when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+shift+f a",
+		"command": "editor.foldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+k ctrl+0",
+		"command": "-editor.foldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+f i",
+		"command": "editor.toggleImportFold"
+	},
+	{
+		"key": "ctrl+shift+f u",
+		"command": "editor.unfoldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+k ctrl+j",
+		"command": "-editor.unfoldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+f t",
+		"command": "editor.toggleFold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+k ctrl+l",
+		"command": "-editor.toggleFold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+f n",
+		"command": "editor.unfold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+]",
+		"command": "-editor.unfold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+f f",
+		"command": "editor.fold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+[",
+		"command": "-editor.fold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+f s",
+		"command": "workbench.action.findInFiles"
+	},
+	{
+		"key": "ctrl+shift+f",
+		"command": "-workbench.action.findInFiles"
+	},
+	{
+		"key": "ctrl+shift+t p",
+		"command": "workbench.action.togglePanel"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "-workbench.action.togglePanel"
+	},
+	{
+		"key": "ctrl+shift+l g",
+		"command": "lazygit.openLazygit"
+	},
+	{
+		"key": "ctrl+g g",
+		"command": "-lazygit.openLazygit"
+	},
+	{
+		"key": "ctrl+shift+c e",
+		"command": "workbench.action.closeOtherEditors"
+	},
+	{
+		"key": "ctrl+shift+c o",
+		"command": "workbench.action.closeEditorsInOtherGroups"
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "-workbench.action.terminal.openNativeConsole",
+		"when": "!terminalFocus"
+	},
+	{
+		"key": "ctrl+shift+t z",
+		"command": "workbench.action.toggleZenMode",
+		"when": "!isAuxiliaryWindowFocusedContext"
+	},
+	{
+		"key": "ctrl+k z",
+		"command": "-workbench.action.toggleZenMode",
+		"when": "!isAuxiliaryWindowFocusedContext"
+	},
+	{
+		"key": "ctrl+shift+g m",
+		"command": "workbench.action.toggleMaximizeEditorGroup",
+		"when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
+	},
+	{
+		"key": "ctrl+k ctrl+m",
+		"command": "-workbench.action.toggleMaximizeEditorGroup",
+		"when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
+	},
+
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.action.showAllEditors"
+	},
+	{
+		"key": "ctrl+k ctrl+p",
+		"command": "-workbench.action.showAllEditors"
+	},
+	{
+		"key": "ctrl+m",
+		"command": "-editor.action.toggleTabFocusMode"
+	},
+	{
+		"key": "ctrl+shift+t a",
+		"command": "github.copilot.completions.toggle",
+		"when": "github.copilot.activated"
 	}
 ]

@@ -21,6 +21,7 @@ class = "kitty-dropterm"
 size = "75% 90%"
 max_size = "1920px 100%"
 margin = 50
+lazy = true
 
 [scratchpads.term]
 animation = "fromBottom"
@@ -29,6 +30,7 @@ class = "ghostty-scratchpad"
 size = "75% 90%"
 max_size = "1920px 100%"
 margin = 50
+lazy = true
 
 [scratchpads.readebook]
 animation = "fromBottom"
@@ -48,3 +50,12 @@ size = "90% 90%"
 max_size = "1920px 100%"
 margin = 50
 lazy = true
+
+# [scratchpads.discord]
+# animation = "fromBottom"
+# command = "webcord"
+# class = "WebCord"
+# size = "90% 90%"
+# max_size = "1920px 100%"
+# margin = 50
+# # lazy = true

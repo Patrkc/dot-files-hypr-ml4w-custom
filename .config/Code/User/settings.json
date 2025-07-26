@@ -4,25 +4,15 @@
 	// "terminal.integrated.minimumContrastRatio": 1,
 	"debug.javascript.autoAttachFilter": "disabled",
 	"markdown.preview.fontSize": 16,
-
 	"telemetry.telemetryLevel": "off",
-	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+	// "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 	"workbench.activityBar.location": "top",
-	"workbench.editor.centeredLayoutFixedWidth": true,
-	"workbench.editor.centeredLayoutAutoResize": false,
-
-	"projectManager.git.baseFolders": [
-		"vscode-remote://ssh-remote+s00.agssa.net/home/pcairoli/project-one/",
-		"home/archimboldi/projects/"
-	],
+	"projectManager.git.baseFolders": [],
 	"projectManager.sortList": "Recent",
-
 	"explorer.confirmDelete": false,
 	"explorer.compactFolders": false,
-
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"prettier.useTabs": true,
-
 	"editor.fontFamily": "'CaskaydiaCove Nerd Font', 'FiraCode Nerd Font', 'Courier New', monospace",
 	"editor.rulers": [100, 100],
 	"editor.mouseWheelZoom": true,
@@ -30,7 +20,6 @@
 	"editor.formatOnSave": true,
 	"editor.fontLigatures": true,
 	"editor.tabSize": 2,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.smoothScrolling": true,
 	"editor.bracketPairColorization.enabled": true,
 	"editor.guides.bracketPairs": "active",
@@ -42,15 +31,9 @@
 		"source.removeUnusedImports": "explicit"
 		// "source.organizeImports": "explicit"
 	},
-
 	"prettier.singleQuote": true,
-
 	"typescript.inlayHints.parameterNames.enabled": "literals",
-
 	"editor.minimap.enabled": false,
-	"supermaven.enable": {
-		"*": false
-	},
 	"remote.SSH.defaultForwardedPorts": [],
 	"diffEditor.ignoreTrimWhitespace": false,
 	"terminal.explorerKind": "external",
@@ -59,14 +42,11 @@
 	"workbench.editor.scrollToSwitchTabs": true,
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.showTabs": "single",
-
 	"breadcrumbs.enabled": false,
-	"workbench.colorTheme": "Catppuccin Mocha",
-	"workbench.iconTheme": "a-file-icon-vscode",
-
+	"workbench.secondarySideBar.enabled": false,
 	"screencastMode.fontSize": 25,
 	"screencastMode.verticalOffset": 10,
-
+	"workbench.editor.revealIfOpen": true,
 	"editor.tokenColorCustomizations": {
 		"textMateRules": [
 			{
@@ -99,19 +79,42 @@
 			}
 		]
 	},
-
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#181825",
+		"statusBar.noFolderBackground": "#181825",
+		"statusBar.debuggingBackground": "#181825",
+		"statusBar.foreground": "#cdd6f4",
+		"statusBar.debuggingForeground": "#cdd6f4"
+	},
 	// VIM Config
 	"vim.leader": "<Space>",
 	"editor.cursorSurroundingLines": 8,
 	"vim.useCtrlKeys": false,
-
-	// "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+	"editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
 	"vim.foldfix": true,
 	"vim.highlightedyank.enable": true,
-	"vim.highlightedyank.color": "#CAA6F4",
+	"vim.highlightedyank.color": "#89b4fa",
 	"vim.highlightedyank.duration": 250,
 	"vim.useSystemClipboard": true,
 	"vim.easymotion": true,
+	"vim.surround": true,
+
+	"vim.statusBarColors.normal": ["#181825", "#cdd6f4"], // Text on Crust
+	"vim.statusBarColors.insert": ["#181825", "#89b4fa"],
+	"vim.statusBarColors.visual": ["#181825", "#cba6f7"],
+	"vim.statusBarColors.visualblock": ["#18V1825", "#f38ba8"],
+	"vim.statusBarColors.visualline": ["#181825", "#f38ba8"],
+	"vim.statusBarColors.replace": ["#181825", "#cdd6f4"], // Text on Crust
+	"vim.statusBarColors.commandlineinprogress": ["#181825", "#cdd6f4"], // Text on Crust
+	"vim.statusBarColors.searchinprogressmode": ["#181825", "#cdd6f4"], // Text on Crust
+	"vim.statusBarColors.easymotionmode": ["#181825", "#cdd6f4"], // Text on Crust
+	"vim.statusBarColors.easymotioninputmode": ["#181825", "#cdd6f4"], // Text on Crust
+	"vim.statusBarColors.surroundinputmode": ["#181825", "#cdd6f4"], // Text on Crust
+	"vim.easymotionMarkerForegroundColorOneChar": "#cba6f7",
+	"vim.easymotionMarkerForegroundColorTwoCharFirst": "#cba6f7",
+	"vim.easymotionMarkerForegroundColorTwoCharSecond": "#f38ba8",
+	"vim.easymotionIncSearchForegroundColor": "#cba6f7",
+	// "vim.easymotionIncSearchForegroundColor": "#11111b",
 
 	// VIM will ignore these Keybindings
 	"vim.handleKeys": {
@@ -123,94 +126,30 @@
 		"<S-n>": false,
 		"<C-a>": false
 	},
-
-	"vim.normalModeKeyBindingsNonRecursive": [
-		// Toggle Booleans
+	"vim.insertModeKeyBindings": [
 		{
-			"before": ["<leader>", "i"],
-			"commands": ["extension.toggleBool"]
-		},
-		// NAVIGATION
-
-		// File Explorer
-		{
-			"before": ["<leader>", "e"],
-			"commands": ["workbench.view.explorer"]
-		},
-		// switch b/w buffers
-		{ "before": ["<S-h>"], "commands": [":bprevious"] },
-		{ "before": ["<S-l>"], "commands": [":bnext"] },
-
-		// splits
-		{ "before": ["leader", "v"], "commands": [":vsplit"] },
-		{ "before": ["leader", "s"], "commands": [":split"] },
-
-		// panes
-		{
-			"before": ["leader", "h"],
-			"commands": ["workbench.action.focusLeftGroup"]
-		},
-		{
-			"before": ["leader", "j"],
-			"commands": ["workbench.action.focusBelowGroup"]
-		},
-		{
-			"before": ["leader", "k"],
-			"commands": ["workbench.action.focusAboveGroup"]
-		},
-		{
-			"before": ["leader", "l"],
-			"commands": ["workbench.action.focusRightGroup"]
-		},
-		// NICE TO HAVE
-		{ "before": ["leader", "w"], "commands": [":w!"] },
-		{ "before": ["leader", "q"], "commands": [":q!"] },
-		{ "before": ["leader", "x"], "commands": [":x!"] },
-		// {
-		// 	"before": ["[", "d"],
-		// 	"commands": ["editor.action.marker.prev"]
-		// },
-		// {
-		// 	"before": ["]", "d"],
-		// 	"commands": ["editor.action.marker.next"]
-		// },
-		{
-			"before": ["<leader>", "c", "a"],
-			"commands": ["editor.action.quickFix"]
-		},
-		{ "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
-		{ "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
-		{
-			"before": ["g", "h"],
-			"commands": ["editor.action.showDefinitionPreviewHover"]
+			"before": ["j", "j"],
+			"after": ["<Esc>"]
 		}
 	],
-	"vim.visualModeKeyBindings": [
-		// Stay in visual mode while indenting
-		{ "before": ["<"], "commands": ["editor.action.outdentLines"] },
-		{ "before": [">"], "commands": ["editor.action.indentLines"] },
-		// Move selected lines while staying in visual mode
-		{ "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-		{ "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
-		// toggle comment selection
-		// { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
-	],
-
-	"vim.normalModeKeyBindings": [
-		/**
-		LSP Keybindings
-
-		gd - Go to Definition (🔥)
-		gpd - Peek Definition
-		gh - Show Hover (🔥)
-		gi - Go to Implementations (🔥)
-		gpi - Peek Implementations	
-		gq - Quick fix (open the code action lightbulb menu)
-		gr - Go to References (🔥)
-		gt - Go to Type Definition (🔥)
-		gpt - Peek Type Definition
-		*/
-
+	"vim.normalModeKeyBindingsNonRecursive": [
+		/******** Code Actions ********/
+		{
+			"before": ["<leader>", "g"],
+			"commands": ["workbench.action.gotoLine"]
+		},
+		{
+			"before": ["<leader>", "c", "r"],
+			"commands": ["editor.action.rename"]
+		},
+		{
+			"before": ["<leader>", "c", "s"],
+			"commands": ["editor.action.gotoSymbol"]
+		},
+		{
+			"before": ["<leader>", "e"],
+			"commands": ["workbench.action.showAllEditors"]
+		},
 		{
 			"before": ["g", "p", "d"],
 			"commands": ["editor.action.peekDefinition"]
@@ -218,6 +157,10 @@
 		{
 			"before": ["g", "h"],
 			"commands": ["editor.action.showDefinitionPreviewHover"]
+		},
+		{
+			"before": ["g", "d"],
+			"commands": ["editor.action.revealDefinition"]
 		},
 		{
 			"before": ["g", "i"],
@@ -242,10 +185,139 @@
 		{
 			"before": ["g", "p", "t"],
 			"commands": ["editor.action.peekTypeDefinition"]
+		},
+		{
+			"before": ["[", "d"],
+			"commands": ["editor.action.marker.prev"]
+		},
+		{
+			"before": ["]", "d"],
+			"commands": ["editor.action.marker.next"]
+		},
+		{
+			"before": ["<leader>", "c", "a"],
+			"commands": ["editor.action.quickFix"]
+		},
+		{
+			"before": ["<leader>", "f"],
+			"commands": ["workbench.action.quickOpen"]
+		},
+		{
+			"before": ["<leader>", "s", "w"],
+			"commands": ["workbench.action.showAllSymbols"]
+		},
+		{
+			"before": ["<leader>", "s", "c"],
+			"commands": ["workbench.action.showCommands"]
+		},
+		{
+			"before": ["<leader>", "g", "g"],
+			"commands": ["workbench.view.scm"]
+		},
+		{
+			"before": ["d"],
+			"after": ["\"", "_", "d"]
+		},
+		{
+			"before": ["D"],
+			"after": ["\"", "_", "D"]
+		},
+		{
+			"before": ["d", "d"],
+			"after": ["\"", "_", "d", "d"]
+		},
+		/******** Extensions ********/
+		// Harpoon
+		{
+			"before": ["<leader>", "a"],
+			"commands": ["vscode-harpoon.addEditor"]
+		},
+		{
+			"before": ["<leader>", "p, e"],
+			"commands": ["vscode-harpoon.editEditors"]
+		},
+		{
+			"before": ["<leader>", "s", "e"],
+			"commands": ["vscode-harpoon.editorQuickPick"]
+		},
+		{
+			"before": ["<leader>", "0"],
+			"commands": ["vscode-harpoon.gotoEditor1"]
+		},
+		{
+			"before": ["<leader>", "5"],
+			"commands": ["vscode-harpoon.gotoEditor2"]
+		},
+		{
+			"before": ["<leader>", "6"],
+			"commands": ["vscode-harpoon.gotoEditor3"]
+		},
+		{
+			"before": ["<leader>", "-"],
+			"commands": ["vscode-harpoon.gotoEditor4"]
+		},
+		// Toggle Booleans
+		{
+			"before": ["<leader>", "i"],
+			"commands": ["extension.toggleBool"]
+		},
+		{
+			"before": ["<leader>", "l", "g"],
+			"commands": ["lazygit.openLazygit"]
+		},
+		// NAVIGATION
+		// splits
+		{
+			"before": ["leader", "s"],
+			"commands": [":vsplit"]
+		},
+		{
+			"before": ["leader", "h"],
+			"commands": [":split"]
+		},
+		// NICE TO HAVE
+		{
+			"before": ["leader", "w"],
+			"commands": [":w!"]
+		},
+		{
+			"before": ["leader", "q"],
+			"commands": [":q!"]
+		},
+		{
+			"before": ["leader", "x"],
+			"commands": [":x!"]
+		}
+	],
+	"vim.visualModeKeyBindings": [
+		// Stay in visual mode while indenting
+		{
+			"before": ["<"],
+			"commands": ["editor.action.outdentLines"]
+		},
+		{
+			"before": [">"],
+			"commands": ["editor.action.indentLines"]
+		},
+		// Move selected lines while staying in visual mode
+		{
+			"before": ["J"],
+			"commands": ["editor.action.moveLinesDownAction"]
+		},
+		{
+			"before": ["K"],
+			"commands": ["editor.action.moveLinesUpAction"]
+		},
+		// toggle comment selection
+		{ "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		{
+			"before": ["d"],
+			"after": ["\"", "_", "d"]
 		}
 	],
 	// "editor.scrollBeyondLastLine": false,
-
 	"gopls": {
 		"ui.semanticTokens": true
 	},
@@ -281,15 +353,80 @@
 	"workbench.sideBar.location": "right",
 	"window.menuBarVisibility": "toggle",
 	"window.commandCenter": false,
-	"github.copilot.editor.enableAutoCompletions": false,
 	"emmet.showAbbreviationSuggestions": false,
-	"vim.smartRelativeLine": true
+	"chat.agent.enabled": true,
+	"github.copilot.advanced": {
+		"authProvider": "github"
+	},
+	"github.copilot.enable": {
+		"*": false,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false
+	},
+	// "[typescriptreact]": {
+	// 	"editor.defaultFormatter": "vscode.typescript-language-features"
+	// },
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"workbench.layoutControl.enabled": false,
+	"window.titleBarStyle": "native",
+	"remote.autoForwardPortsSource": "hybrid",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"windsurf.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
+	"windsurf.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
+	"workbench.settings.applyToAllProfiles": ["workbench.editor.enablePreview"],
+	"workbench.settings.editor": "json",
+	"workbench.editor.enablePreviewFromCodeNavigation": true,
+	"workbench.editor.enablePreviewFromQuickOpen": true,
+	"git.suggestSmartCommit": false,
+	"workbench.editor.centeredLayoutFixedWidth": true,
+	"workbench.editor.centeredLayoutAutoResize": false,
+	"workbench.colorTheme": "Catppuccin Mocha",
+	"window.newWindowProfile": "Default",
+	"mssql.connectionGroups": [
+		{
+			"name": "ROOT",
+			"id": "8B413109-70BF-4077-B81F-083B6AF5D461"
+		}
+	],
+	"mssql.intelliSense.lowerCaseSuggestions": true,
+	"zenMode.hideStatusBar": false,
+	"terminal.external.linuxExec": "ghostty",
+	"terminal.integrated.confirmOnKill": "always",
+	"prettier.requireConfig": true,
+	"diffEditor.hideUnchangedRegions.enabled": true,
+	"gitblame.inlineMessageEnabled": true,
+	"gitblame.statusBarMessageClickAction": "Open tool URL",
+	"chat.mcp.serverSampling": {
+		"Global in Code: context7": {
+			"allowedModels": [
+				"github.copilot-chat/gpt-4.1",
+				"github.copilot-chat/gemini-2.0-flash-001",
+				"github.copilot-chat/gemini-2.5-pro",
+				"github.copilot-chat/gpt-4o",
+				"github.copilot-chat/o3-mini",
+				"github.copilot-chat/o4-mini"
+			]
+		}
+	},
 
-	// "[go]": {
+
+	// "custom-ui-style.stylesheet": {
+	// 	".statusbar-item-label[aria-label^=\"-- NORMAL --\"], .statusbar-item-label[aria-label^=\"-- SURROUND INPUT --\"], .statusbar-item-label[aria-label^=\"-- EASYMOTION INPUT --\"], .statusbar-item-label[aria-label='Already at oldest change'], .statusbar-item-label[aria-label=':nohlsearch'], .statusbar-item-label[aria-label$='yanked']": "background-color: #89b4fa !important; color: #181825 !important",
+	// 	".statusbar-item-label[aria-label^=\"-- INSERT --\"]": "background-color: #cf7972 !important; color: #170A09 !important",
+	// 	".statusbar-item-label[aria-label^=\"-- REPLACE --\"]": "background-color: #f38ba8 !important; color: #181825 !important",
+	// 	".statusbar-item-label[aria-label^=\"-- VISUAL --\"], .statusbar-item-label[aria-label^=\"-- VISUAL BLOCK --\"], .statusbar-item-label[aria-label^=\"-- VISUAL LINE --\"]": "background-color: #cba6f7 !important; color: #181825 !important",
+	// 	".statusbar-item-label[aria-label^=':']": "background-color: #dba156 !important; color: #080805 !important; font-size: 1.5em; font-family: monospace",
+	// 	".statusbar-item-label[aria-label^='/']": "background-color: #f9e2af !important; color: #080815 !important; font-size: 1.5em; font-family: monospace"
+	// }
 	// 	"editor.defaultFormatter": "golang.go",
 	// 	"editor.formatOnSave": true
 	// },
-
 	// "macros.list": {
 	//   "splitAndCloseRight": [
 	//     "workbench.action.splitEditorToRightGroup",

@@ -1,23 +1,20 @@
 # -----------------------------------------------------
-# INIT
-# -----------------------------------------------------
-
-# -----------------------------------------------------
 # Exports
 # -----------------------------------------------------
 export EDITOR=nvim
-# export PATH="/usr/lib/ccache/bin/:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 
-# https://github.com/sharkdp/bat?tab=readme-ov-file#man
-# use bat to color man pages. 
-export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'";
+# --- PATH Additions ---
+# Add Android SDK Platform Tools to PATH
+export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
+# export PATH="/usr/lib/ccache/bin/:$PATH" # Example ccache path
 
-
-
+# --- Tool-specific Configurations ---
+# Bat (man pages)
+export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
 export BAT_PAGER="less -RF"
 
-# https://github.com/catppuccin/fzf
+# FZF (Catppuccin theme)
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
 --color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
@@ -25,16 +22,20 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#51576d \
 --color=border:#414559,label:#c6d0f5"
 
+# -----------------------------------------------------
+# Functions & Initializations (load these last)
+# -----------------------------------------------------
 
-# https://yazi-rs.github.io/docs/quick-start#shell-wrapper
+# Yazi (file manager wrapper)
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}    
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
 
-#  https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#flags
+# Zoxide (directory jumper) - MUST be initialized after PATH is set.
 eval "$(zoxide init zsh)"
+
